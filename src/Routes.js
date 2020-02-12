@@ -9,7 +9,7 @@ export default function Routes(){
         <Switch>
             <Route path="/" exact component = {Home}/>
             <Route path="/books" exact component = {books}/>
-            <Route path="/author" exact component = {Author}/>
+            <Route path="/authors" exact component = {Author}/>
         </Switch>
     );
 }
