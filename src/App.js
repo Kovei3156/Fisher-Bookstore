@@ -21,6 +21,16 @@ export default class App extends Component{
             </Nav>
           </Navbar.Collapse>
         </Navbar.Brand>
+        <Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav>
+              <NavItem>
+                <Nav.Link href="/author"> Author </Nav.Link>
+              </NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar.Brand>
         
       </Navbar>
       <Routes />
