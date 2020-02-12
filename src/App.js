@@ -10,7 +10,7 @@ export default class App extends Component{
       <Navbar bg="dark" expand="lg">
         <Navbar.Brand>
           <Link to="/">Fisher Bookstore</Link>
-        </Navbar.Brands>
+        </Navbar.Brand>
         <Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav"/>
           <Navbar.Collapse className="justify-content-end">
