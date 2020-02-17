@@ -22,7 +22,7 @@ export default class App extends Component{
             <NavItem>
               <Nav.Link href="/author"> Author </Nav.Link>
             </NavItem>
-          </Nav>
+          </Navc>
           </Navbar.Collapse>
       </Navbar>
       <Routes />
