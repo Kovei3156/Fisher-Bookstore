@@ -24,7 +24,7 @@ export default class App extends Component{
             </NavItem>
           </Nav>
           </Navbar.Collapse>
-      </Navbarc>
+      </Navbar>
       <Routes />
     </div>);
   }
