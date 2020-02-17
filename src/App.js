@@ -18,15 +18,12 @@ export default class App extends Component{
                 <Nav.Link href="/books"> Books </Nav.Link>
               </NavItem>
             </Nav>
-          </Navbar.Collapse>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse className="justify-content-end">
-          <Nav>
+            <Nav>
             <NavItem>
               <Nav.Link href="/author"> Author </Nav.Link>
             </NavItem>
           </Nav>
-        </Navbar.Collapse>
+          </Navbar.Collapse>
       </Navbar>
       <Routes />
     </div>);
