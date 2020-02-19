@@ -12,7 +12,6 @@ export default class App extends Component{
           <Link to="/">Fisher Bookstore</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-<<<<<<< HEAD
           <Navbar.Collapse className="justify-content-end">
             <Nav>
               <NavItem>
@@ -20,20 +19,11 @@ export default class App extends Component{
               </NavItem>
             </Nav>
             <Nav>
-=======
-        <Navbar.Collapse className="justify-content-end">
-          <Nav>
->>>>>>> 8a5e16e16a8517339fef147e1c11f7a0523e5933
             <NavItem>
-              <Nav.Link href="/books"> Books </Nav.Link>
+              <Nav.Link href="/author"> Author </Nav.Link>
             </NavItem>
           </Nav>
-<<<<<<< HEAD
           </Navbar.Collapse>
-=======
-        </Navbar.Collapse>
-        
->>>>>>> 8a5e16e16a8517339fef147e1c11f7a0523e5933
       </Navbar>
       <Routes />
     </div>);
