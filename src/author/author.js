@@ -1,38 +1,20 @@
-import React, {Component} from "react";
+import React, {useEffect, useState} from "react";
 import "./author.css";
 import { AuthorDisplay} from "./AuthorDisplay";
 
-export default class Author extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            authors:[
-                {
-                    id:0,
-                    name: "Eric Evans",
-                    detail:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-
-                },
-                {
-                    id: 1,
-                    name: "Nicole Forsgren",
-                    detail:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                },
-                {
-                    id: 2,
-                    name: "Nicole Forsgrensed",
-                    detail:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                }
-            ]
-        }
-    }
-    render(){
-        return(
-            <div className="Author">
-                <div className="lander">
-                   <AuthorDisplay author={this.state.authors}/>
-                </div>
+export default function Author(props){
+    const [data, setData] = useState([]);
+    
+    useEffect(() =>{
+        fetch("https://localhost:5001/api/authors/")
+        .then(response => response.json())
+        .then(data => setData(data));
+    }, [])
+    return(
+        <div className="Author">
+            <div className="lander">
+               <AuthorDisplay author={data}/>
             </div>
-        );
-    }
+        </div>
+    );
 }
